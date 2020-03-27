@@ -1,9 +1,6 @@
 var Mammal = (function (__super){
-  function Mammal() {
-    __super.call(this)
-  }
-  Mammal.height = 50;
-  Mammal.givesMilk = function(){
+  var height = 50;
+  function givesMilk(){
     if(this.sex == "female"){
       console.log("I'm giving milk!")
     }else{
@@ -11,9 +8,15 @@ var Mammal = (function (__super){
     }
   }
 
+  function Mammal() {
+    __super.call(this)
+  }
+
   Mammal.prototype = Object.create(__super.prototype);
   Mammal.prototype.constructor = Mammal;
 
-    return Mammal;
+  Mammal.prototype.height = height;
+  Mammal.prototype.givesMilk = givesMilk;
+
+  return Mammal;
 })(Animal);
-  

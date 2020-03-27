@@ -1,4 +1,5 @@
-
-console.log(new Raccoon);
-console.log(new Mammal);
-console.log(new Animal)
+console.log(new Raccoon())
+console.log(new Raccoon().age)
+console.log(new Raccoon().givesMilk())
+console.log(new Mammal().sex)
+console.log(new Mammal().run())
